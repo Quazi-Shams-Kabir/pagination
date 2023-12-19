@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hide" id="showModalBtn">
+      <button class="showBtn">Show</button>
+    </div>
+    <div class="container" id="container">
+      <div class="container2">
+        <div class="close" id="closeBtn">
+          <img src="./close.svg" alt="close logo" class="closeLogo" />
+        </div>
+
+        <div class="content">
+          <!-- handle it on the server side -->
+          <form action="/search" method="post">
+            <div class="search">
+              <input
+                type="text"
+                class="searchText"
+                id="searchInput"
+                name="searchInput"
+              />
+              <button type="submit" name="searchBtn" class="searchBtn">
+                <img src="search.svg" alt="search logo" class="searchLogo" />
+              </button>
+            </div>
+          </form>
+          <div id="data-container" class="searchResults">
+            <!-- Data will be displayed here -->
+          </div>
+          <div class="paginationContainer">
+            <ul class="pagination" id="pagination">
+              <li><a href="#" id="prev"> << </a></li>
+              <!-- Page number buttons will be added here -->
+              <li><a href="#" id="next"> >> </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
